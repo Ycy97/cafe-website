@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-MY">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Amber & Oak Coffee House</title>
+  <meta name="description" content="Get in touch with Amber & Oak Coffee House - find our address, hours, and send us a message.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="vendor/leaflet/leaflet.js" defer></script>
+  <script src="js/map.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- ============== HEADER / NAV ============== -->
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="1" y="1" width="46" height="46" rx="23" stroke="currentColor"/><path d="M13 23h20v7a7 7 0 0 1-7 7h-6a7 7 0 0 1-7-7Zm20 1h2a4 4 0 0 1 0 8h-3M11 40h26M23 21c-7-3-5-10 3-12 2 6 1 10-3 12Zm0 0 2-8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> Amber &amp; Oak
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="main-navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <!-- ============== PAGE BANNER ============== -->
+    <section class="page-banner">
+      <div class="container">
+        <p class="eyebrow" style="color:var(--color-copper-light);">We'd love to see you</p>
+        <h1>Get in touch</h1>
+        <p>Questions, catering requests, or just want to say hi — here's how to reach us.</p>
+      </div>
+    </section>
+
+    <!-- ============== CONTACT LAYOUT ============== -->
+    <section>
+      <div class="container contact-layout">
+
+        <!-- Contact info -->
+        <div class="reveal">
+          <h2>Visit or reach out</h2>
+          <ul class="contact-info-list">
+            <li>
+              <span class="contact-info-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 10c0 6-7 12-7 12S5 16 5 10a7 7 0 0 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span>
+              <div>
+                <h3>Sample location · Kuala Lumpur</h3>
+                <p>Jalan Hang Kasturi, near Central Market<br>50050 Kuala Lumpur, Malaysia</p>
+              </div>
+            </li>
+            <li>
+              <span class="contact-info-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 3 4 4-2 3a16 16 0 0 0 7 7l3-2 4 4c-1 6-8 2-13-3S0 4 5 3Z"/></svg></span>
+              <div>
+                <h3>Phone</h3>
+                <p>+60 3-XXXX XXXX (sample)</p>
+              </div>
+            </li>
+            <li>
+              <span class="contact-info-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span>
+              <div>
+                <h3>Email</h3>
+                <p>hello@amberandoak.example</p>
+              </div>
+            </li>
+            <li>
+              <span class="contact-info-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg></span>
+              <div>
+                <h3>Hours (Malaysia Time, UTC+8)</h3>
+                <p>Mon – Fri: 7:00 am – 6:00 pm &nbsp;•&nbsp; Sat – Sun: 8:00 am – 5:00 pm</p>
+              </div>
+            </li>
+          </ul>
+
+          <div id="cafe-map" aria-label="Interactive map of the sample Kuala Lumpur location"><p class="map-fallback">Map unavailable? Use the directions link below.</p></div>
+          <p class="map-status" role="status"></p>
+          <p class="demo-note">This demo uses the Central Market neighbourhood as its sample location; the map does not mark an operating Amber &amp; Oak café. Phone and email are placeholders.</p>
+          <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Central%20Market%20Kuala%20Lumpur%20Malaysia" target="_blank" rel="noopener noreferrer">Explore the area on Google Maps</a>
+        </div>
+
+        <!-- Contact form -->
+        <div class="contact-form-card reveal">
+          <h2>Try the contact form</h2>
+          <p id="form-note">This is a demonstration. Messages are validated here but are not sent or stored.</p>
+          <noscript><p>Enable JavaScript to try the form.</p></noscript>
+
+          <div class="form-success" role="status"></div>
+
+          <form class="contact-form" aria-describedby="form-note" novalidate>
+            <div class="form-row">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+              <p class="error-message">Please enter your name.</p>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+              <p class="error-message">Please enter a valid email address.</p>
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone Number <span style="font-weight:400;color:var(--color-muted);">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="e.g. +60 12-345 6789">
+            </div>
+
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="">Choose one...</option>
+                <option value="general">General Question</option>
+                <option value="catering">Catering Request</option>
+                <option value="feedback">Feedback</option>
+                <option value="careers">Careers</option>
+              </select>
+              <p class="error-message">Please choose a subject.</p>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" minlength="10" required></textarea>
+              <p class="error-message">Please enter a message of at least 10 characters.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;" disabled>Check Message</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-logo"><svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="1" y="1" width="46" height="46" rx="23" stroke="currentColor"/><path d="M13 23h20v7a7 7 0 0 1-7 7h-6a7 7 0 0 1-7-7Zm20 1h2a4 4 0 0 1 0 8h-3M11 40h26M23 21c-7-3-5-10 3-12 2 6 1 10-3 12Zm0 0 2-8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> Amber &amp; Oak</p>
+          <p>A neighbourhood coffee house serving small-batch roasted coffee and fresh pastries since 2019.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hours (MYT)</h4>
+          <ul>
+            <li>Mon – Fri: 7:00 am – 6:00 pm</li>
+            <li>Sat – Sun: 8:00 am – 5:00 pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="current-year">2026</span> Amber &amp; Oak Coffee House. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
